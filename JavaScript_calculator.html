@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charser="UTF-8">
+		<title>Java Script Calculator</title>
+	
+		<script>
+			var n1, n2;
+			
+			function init()
+			{
+				n1 = document.getElementById("number1").value;
+				n2 = document.getElementById("number2").value
+			}
+			
+			function addnumbers()
+			{
+				init();
+				n1 = parseInt(n1);
+				n2 = parseInt(n2);
+				
+				var result = n1 + n2;
+				
+				document.getElementById("result").value = result;
+			}
+			
+			function subtractnumbers()
+			{
+				init();
+				n1 = parseInt(n1);
+				n2 = parseInt(n2);
+				
+				var result = n1 - n2;
+				
+				document.getElementById("result").value = result;
+			}
+			
+			function multiplynumbers()
+			{
+				init();
+				n1 = parseInt(n1);
+				n2 = parseInt(n2);
+				
+				var result = n1 * n2;
+				
+				document.getElementById("result").value = result;
+			}
+			
+			function devisionnumbers()
+			{
+				init();
+				n1 = parseInt(n1);
+				n2 = parseInt(n2);
+				
+				var result = n1 / n2;
+				
+				document.getElementById("result").value = result;
+			}
+			
+		</script>
+	</head>
+	
+	<body>
+		<form>
+			<fieldset>
+				<legend>Calculator</legend>
+					Numer1: <input type="number" id="number1" />
+					<br/><br/>
+					
+					Numer2: <input type="number" id="number2" />
+					<br/><br/>
+					
+					Result:<input type="number" id="result" readonly>
+					<br/><br/>
+					
+					<button type="button" onclick="addnumbers();">Add</button> &nbsp;&nbsp;
+					<button type="button" onclick="subtractnumbers();">Subtract</button> &nbsp;&nbsp;
+					<button type="button" onclick="multiplynumbers();">Multiply</button> &nbsp;&nbsp;
+					<button type="button" onclick="devisionnumbers();">Devision</button> &nbsp;&nbsp;
+			</fieldset>
+		</form>
+	</body>
+</html>
